@@ -11,20 +11,28 @@ public class PgService implements PgServiceIF{
 
 	@Override
 	public int insertPurryGi(List<PurryGiVO> purrygi) {
-		// TODO Auto-generated method stub
+		// DAO 
+		
 		return 0;
 	}
 
 	@Override
-	public void updatePurryGi(PurryGiVO purrygi) {
+	public int updatePurryGi(PurryGiVO purrygi) {
 		// TODO Auto-generated method stub
-		
+		return 0;
+	}
+
+
+	@Override
+	public List<PurryGiVO> selectPurryGiInfoByToken(String token) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	public List<PurryGiVO> selectPurryGiInfo(String token) {
+	public int selectPurryGiInfoByUserId(String userId) {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 }

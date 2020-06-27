@@ -14,7 +14,7 @@ public class Utility {
 	}
 	
 	public static String createToken(PurryGiVO paramPG) {
-		String resToken = "";
+		String resToken = "ABC";
 		return resToken;
 	}
 	
