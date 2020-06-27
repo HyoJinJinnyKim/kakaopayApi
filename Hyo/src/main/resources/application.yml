@@ -1,0 +1,35 @@
+server:
+  ports: 8080
+ 
+spring:
+  profiles:
+    active: dev
+ 
+---
+spring:
+  profiles: dev
+  pid.file: dev_myapi.pid
+  devtools: 
+    livereload: 
+      enabled: true
+  datasource:
+    #url: jdbc:mysql://localhost:3306/sample  ## 1. 기존 사용하던 jdbc:mysql 로 시작하는 url 주석처리 후 jdbc:log4jdbc:mysql 로 시작하는 url 로 변경.
+    url: jdbc:log4jdbc:mysql://localhost:3306/purryGi
+    username: hyojin
+    password: 123456
+    #driver-class-name: com.mysql.jdbc.Driver ## 2. 기존 사용하던 com.mysql.jdbc.Driver를 net.sf.log4jdbc.sql.jdbcapi.DriverSpy 로 변경.
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    hikari:
+      connection-timeout: 5000
+      validation-timeout: 1000
+      maximum-pool-size: 30
+      minimum-idle: 2
+      connection-test-query: SELECT 1
+      
+logging:
+  level: 
+    web: DEBUG
+    
+---
+spring: 
+  profiles: prod
